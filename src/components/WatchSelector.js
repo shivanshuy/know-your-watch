@@ -43,8 +43,8 @@ export default function ComboBox() {
 
     return (
         <div style={{ marginTop: "20px"}}>
-            <Box display="flex" flexDirection="row" bgcolor="background.paper">
-                <Box m={1} bgcolor="background.paper">
+            <Box display="flex" flexDirection="row" flexWrap="wrap">
+                <Box m={1}>
                     <Autocomplete
                         value={value}
                         onChange={(event, newValue) => {
@@ -62,7 +62,7 @@ export default function ComboBox() {
                         renderInput={(params) => <TextField {...params} label="Brand Name" variant="outlined" />}
                     />
                 </Box>
-                <Box m={1} bgcolor="background.paper">
+                <Box m={1}>
                     <Autocomplete
                         value={modelValue}
                         onChange={(event, newValue) => {

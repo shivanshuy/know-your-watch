@@ -52,7 +52,7 @@ export default function SeikoInfoRenderer() {
 
                         }} />
                 </Box>
-                <Box display="flex" flexDirection="row" m={1} bgcolor="background.paper">
+                <Box display="flex" flexDirection="row" m={1}>
                     <Box m={1} fontWeight="fontWeightBold" >Caseback Calibre</Box>
                     <TextField
                         id="standard-basic"
@@ -111,8 +111,8 @@ export default function SeikoInfoRenderer() {
                 </Box>
             </Box>
 
-            <Box border={1} borderColor="primary.main" display="flex" flexDirection="column" p={1} m={1} bgcolor="background.paper">
-                <Box display="flex" flexDirection="row" p={1} m={1} bgcolor="background.paper">
+            <Box border={1} borderColor="primary.main" display="flex" flexDirection="column" p={1} m={1}>
+                <Box display="flex" flexDirection="row" flexWrap="wrap" p={1} m={1}>
                     {serialNumberInfo && <SeikoInfoModelRenderer seikoInfoModel={serialNumberInfo}></SeikoInfoModelRenderer>}
                     <br />
                     {casebackCalibreInfo &&
