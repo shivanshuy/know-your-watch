@@ -3,17 +3,30 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import Box from '@material-ui/core/Box';
 import SeikoInfoRenderer from './seiko/SeikoInfoRenderer';
+import WylerInfoRenderer from './wyler/WylerInfoRenderer';
+import RaketaInfoRenderer from './raketa/RaketaInfoRenderer';
+import OmegaInfoRenderer from './omega/OmegaInfoRenderer';
 
 
 const options = [
     {id: 'SEIKO', name: "Seiko"},
     {id: 'CITIZEN', name: "Citizen"},
-    {id: 'WYLER', name: "Wyler"},    
+    {id: 'WYLER', name: "Wyler"},
+    {id: 'RAKETA', name: "Raketa"},
+    {id: 'OMEGA', name: "Omega"}
 ];
+
+const dummyBrandOption = {id: 'DUMMY', name: "Brand Name", brandId: "DUMMY"};
+options.unshift(dummyBrandOption);
+
 
 const allModelOptions = [
     {id: 'LM', name: "LM", brandId: "SEIKO"},
-    {id: 'INCAFKEX', name: "Incaflex", brandId: "WYLER"}
+    {id: 'BELLMATIC', name: "Bellmatic", brandId: "SEIKO"},
+    {id: 'SQ', name: "SQ (Seiko Quartz)", brandId: "SEIKO"},
+    {id: 'ADVAN', name: "Advan", brandId: "SEIKO"},
+    {id: 'INCAFLEX', name: "Incaflex", brandId: "WYLER"},
+    {id: 'BIGZERO', name: "Big Zero", brandId: "RAKETA"}
 ];
 const dummyModelOption = {id: 'DUMMY', name: "Model Name", brandId: "DUMMY"};
 
@@ -42,7 +55,7 @@ export default function ComboBox() {
     }
 
     return (
-        <div style={{ marginTop: "20px"}}>
+        <div style={{marginTop: "20px"}}>
             <Box display="flex" flexDirection="row" flexWrap="wrap">
                 <Box m={1}>
                     <Autocomplete
@@ -82,7 +95,21 @@ export default function ComboBox() {
             </Box>
             {
                 value && value.id == "SEIKO" &&
-                <SeikoInfoRenderer></SeikoInfoRenderer>
+                <SeikoInfoRenderer model={modelValue.id}></SeikoInfoRenderer>
+            }
+
+            {
+                value && value.id == "WYLER" &&
+                <WylerInfoRenderer model={modelValue.id}></WylerInfoRenderer>
+            }
+
+            {
+                value && value.id == "RAKETA" &&
+                <RaketaInfoRenderer model={modelValue.id}></RaketaInfoRenderer>
+            }
+            {
+                value && value.id == "OMEGA" &&
+                <OmegaInfoRenderer model={modelValue.id}></OmegaInfoRenderer>
             }
         </div>
     );

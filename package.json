@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "cpdir": "npx copyfiles -e build/index.html -u 1 build/*.* build/images/*.* build/static/css/*.* build/static/js/*.* predoc/index.html docs",
+    "cpdir": "npx copyfiles -e build/index.html -u 1 build/*.* build/images/*.* build/images/watches/*.* build/static/css/*.* build/static/js/*.* predoc/index.html docs",
     "build": "node ./scripts/build-non-split.js && npm run cpdir",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

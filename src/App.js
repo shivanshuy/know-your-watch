@@ -15,7 +15,9 @@ function App() {
             <div class="site-menu-item">
               <Link class="site-menu-item-text" to="/">Home</Link>
               <div class="site-menu-item-devider"></div>
-              <Link class="site-menu-item-text" to="/ux">About Me</Link>
+              <Link class="site-menu-item-text" to="/about-watches">About Watches</Link>
+              <div class="site-menu-item-devider"></div>
+              <Link class="site-menu-item-text" to="/about-me">About Me</Link>
             </div>
           </div>
         </div>
