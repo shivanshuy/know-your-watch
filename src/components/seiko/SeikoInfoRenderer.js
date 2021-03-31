@@ -15,8 +15,21 @@ const waterResistOptions = [
     {id: 'WATERRESIST', name: "Water Resist"}
 ];
 
+const allModelOptions = [
+    {id: 'LM', name: "LM", brandId: "SEIKO"},
+    {id: 'BELLMATIC', name: "Bellmatic", brandId: "SEIKO"},
+    {id: 'SQ', name: "SQ (Seiko Quartz)", brandId: "SEIKO"},
+    {id: 'ADVAN', name: "Advan", brandId: "SEIKO"},
+];
+const dummyModelOption = {id: 'DUMMY', name: "Model Name", brandId: "DUMMY"};
 
-export default function SeikoInfoRenderer({model}) {
+allModelOptions.unshift(dummyModelOption);
+export default function SeikoInfoRenderer() {
+
+    const [modelValue, setModelValue] = React.useState(allModelOptions[0]);
+    const [modelOptions, setmodelOptions] = React.useState([]);
+    const [modelInputValue, setModelInputValue] = React.useState('');
+
     const [serialValue, setSerialValue] = React.useState("");
     const [modelReferenceValue, setModelReferenceValue] = React.useState("");
     const [movementValue, setmovementValue] = React.useState("");
@@ -32,11 +45,11 @@ export default function SeikoInfoRenderer({model}) {
         const seikoInfoDecoder = new SeikoInfoDecoder({
             serialNum: serialValue,
             modelReference: modelReferenceValue,
-            model: model,
+            model: modelValue.id,
             movement: movementValue,
             waterResist: waterResistValue.id
         });
-        
+
         const decodedSerialNumberInfo = seikoInfoDecoder.getDecodedSerialNumberInfo();
         const decodedModelReferenceInfo = seikoInfoDecoder.getDecodedModelReferenceInfo();
         const decodedMovementInfo = seikoInfoDecoder.getDecodedMovementInfo();
@@ -72,7 +85,23 @@ export default function SeikoInfoRenderer({model}) {
     return (
         <div>
             <Box border={1} borderColor="primary.main" display="flex" flexDirection="column" p={1} m={1}>
-
+                <Box m={1}>
+                    <Autocomplete
+                        value={modelValue}
+                        onChange={(event, newValue) => {
+                            setModelValue(newValue);
+                        }}
+                        inputValue={modelInputValue}
+                        onInputChange={(event, newInputValue) => {
+                            setModelInputValue(newInputValue);
+                        }}
+                        id="combo-box-demo"
+                        options={allModelOptions}
+                        getOptionLabel={(option) => option.name}
+                        style={{width: 300}}
+                        renderInput={(params) => <TextField {...params} label="Model Name" variant="outlined" />}
+                    />
+                </Box>
                 <Box m={1} display="flex" flexDirection="row">
                     <Box m={1} fontWeight="fontWeightBold" >Serial Number</Box>
                     <TextField

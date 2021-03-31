@@ -44,6 +44,30 @@ const modelsInfo = {
                 title: "raketa-big-zero-peterhof"
             }
         ]
+    },
+    'KOPERNIK': {
+        info: [
+            "Case ~35mm ",
+            "Reliable 2609.HП movement",
+            "Comes in white dial model in a chrome-plated case (above), and a model with a black dial in a black-chrome case.",
+            "The 1980s Raketa Kopernik is named in honour of Nicolaus Copernicus, the Renaissance-era Polish mathematician and astronomer who formulated a model of the universe that placed the Sun rather than the Earth at the centre of the universe. The unique design of the Kopernik represents the Sun and the Moon in a simplistic but clever way – the hour hand is a golden disc, being the Sun, and the minute hand is a black ring, being the Moon.",
+            "Hence this watch is also sometimes known as the ‘Sun and Moon watch’.",
+            "The surface of the dial itself can be described as grainy (much like the surface of the moon perhaps?), and the golden applied hour markers catch the sun’s rays rather nicely indeed."
+        ],
+        images: [
+            {
+                img: './images/watches/raketa-kopernik-1.jpg',
+                title: "raketa-kopernik"
+            },
+            {
+                img: './images/watches/raketa-copernicus-black.jpg',
+                title: "raketa-copernicus-black"
+            },
+            {
+                img: './images/watches/raketa-copernik-movement.jpg',
+                title: "raketa-copernik-movement"
+            }
+        ]
     }
 }
 

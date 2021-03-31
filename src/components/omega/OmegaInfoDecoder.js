@@ -1,10 +1,16 @@
-import OmegaModels from './OmegaModels';
+import OmegaModels, {calibreInfo} from './OmegaModels';
 export default class OmegaInfoDecoder {
     model;
-    constructor({model}) {      
+    calibre;
+    constructor({model, calibre}) {      
         this.model = model;
+        this.calibre = calibre;
     }
     getGeneralModelInfo() {
         return OmegaModels[this.model];
+    }
+
+    getGeneralCalibreInfo() {
+        return calibreInfo[this.calibre];
     }
 }

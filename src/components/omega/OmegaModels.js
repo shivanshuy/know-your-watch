@@ -14,4 +14,87 @@ const modelsInfo = {
     }
 }
 
+export const calibreInfo = {
+    '19': {
+        info: [
+            "Omega was once known as Louis Brandt & Frère, named after its founder, who established the firm in La Chaux-de-Fonds in 1848.",
+            "Sadly, Brandt would pass away in 1879, spurring his sons, Louis-Paul and César, to take on the family business.",
+            "With ambitious goals for their father’s reputable company, the pair revolutionized the watch industry. But a bigger milestone came in 1894, a watershed year for the company as the Brandt brothers began producing the revolutionary Pocket Watch Calibre 19-ligne(ligne is an oldfashioned unit of length that's still being used today, mainly in watchmaking) movement, named after its diameter (equivalent to about 43mm). It was named the Omega calibre, intended to be the be the last word in accuracy and reliability.",
+            "It was one of the very first Swiss watch movements that was designed to be produced on an industrial scale.This meant that anyone with access to parts, anywhere in the world, would be able to quickly service or repair any Omega 19‴ caliber.",
+            "The Omega calibre was also fitted with a patented mechanism, the modern day keyless works, allowing both hand-winding and time-setting via the crown which is still widely used today.",
+            "So successful was the 19-ligne family of movements that the company eventually adopted the name of its bestselling product, and Omega Watch Co. was established in 1903."
+        ],
+        images: [
+            {
+                img: './images/watches/Omega_19-1.jpg',
+                title: "Omega_19-1"
+            },
+            {
+                img: './images/watches/omega-1894-the-original-omega-calibre-the-company-s-namesake-2.jpg',
+                title: "omega-1894-the-original-omega-calibre-the-company-s-namesake-2"
+            }
+        ]
+    },
+    '30': {
+        info: [
+            "Omega was once known as Louis Brandt & Frère, named after its founder, who established the firm in La Chaux-de-Fonds in 1848.",
+            "Sadly, Brandt would pass away in 1879, spurring his sons, Louis-Paul and César, to take on the family business.",
+            "With ambitious goals for their father’s reputable company, the pair revolutionized the watch industry. But a bigger milestone came in 1894, a watershed year for the company as the Brandt brothers began producing the revolutionary Pocket Watch Calibre 19-ligne(ligne is an oldfashioned unit of length that's still being used today, mainly in watchmaking) movement, named after its diameter (equivalent to about 43mm). It was named the Omega calibre, intended to be the be the last word in accuracy and reliability.",
+            "It was one of the very first Swiss watch movements that was designed to be produced on an industrial scale.This meant that anyone with access to parts, anywhere in the world, would be able to quickly service or repair any Omega 19‴ caliber.",
+            "The Omega calibre was also fitted with a patented mechanism, the modern day keyless works, allowing both hand-winding and time-setting via the crown which is still widely used today.",
+            "So successful was the 19-ligne family of movements that the company eventually adopted the name of its bestselling product, and Omega Watch Co. was established in 1903."
+        ],
+        images: [
+            {
+                img: './images/watches/Omega_19-1.jpg',
+                title: "Omega_19-1"
+            },
+            {
+                img: './images/watches/omega-1894-the-original-omega-calibre-the-company-s-namesake-2.jpg',
+                title: "omega-1894-the-original-omega-calibre-the-company-s-namesake-2"
+            }
+        ]
+    },
+    '30T1': {
+        info: [
+            "Omega was once known as Louis Brandt & Frère, named after its founder, who established the firm in La Chaux-de-Fonds in 1848.",
+            "Sadly, Brandt would pass away in 1879, spurring his sons, Louis-Paul and César, to take on the family business.",
+            "With ambitious goals for their father’s reputable company, the pair revolutionized the watch industry. But a bigger milestone came in 1894, a watershed year for the company as the Brandt brothers began producing the revolutionary Pocket Watch Calibre 19-ligne(ligne is an oldfashioned unit of length that's still being used today, mainly in watchmaking) movement, named after its diameter (equivalent to about 43mm). It was named the Omega calibre, intended to be the be the last word in accuracy and reliability.",
+            "It was one of the very first Swiss watch movements that was designed to be produced on an industrial scale.This meant that anyone with access to parts, anywhere in the world, would be able to quickly service or repair any Omega 19‴ caliber.",
+            "The Omega calibre was also fitted with a patented mechanism, the modern day keyless works, allowing both hand-winding and time-setting via the crown which is still widely used today.",
+            "So successful was the 19-ligne family of movements that the company eventually adopted the name of its bestselling product, and Omega Watch Co. was established in 1903."
+        ],
+        images: [
+            {
+                img: './images/watches/Omega_19-1.jpg',
+                title: "Omega_19-1"
+            },
+            {
+                img: './images/watches/omega-1894-the-original-omega-calibre-the-company-s-namesake-2.jpg',
+                title: "omega-1894-the-original-omega-calibre-the-company-s-namesake-2"
+            }
+        ]
+    },
+    '30T2': {
+        info: [
+            "Omega was once known as Louis Brandt & Frère, named after its founder, who established the firm in La Chaux-de-Fonds in 1848.",
+            "Sadly, Brandt would pass away in 1879, spurring his sons, Louis-Paul and César, to take on the family business.",
+            "With ambitious goals for their father’s reputable company, the pair revolutionized the watch industry. But a bigger milestone came in 1894, a watershed year for the company as the Brandt brothers began producing the revolutionary Pocket Watch Calibre 19-ligne(ligne is an oldfashioned unit of length that's still being used today, mainly in watchmaking) movement, named after its diameter (equivalent to about 43mm). It was named the Omega calibre, intended to be the be the last word in accuracy and reliability.",
+            "It was one of the very first Swiss watch movements that was designed to be produced on an industrial scale.This meant that anyone with access to parts, anywhere in the world, would be able to quickly service or repair any Omega 19‴ caliber.",
+            "The Omega calibre was also fitted with a patented mechanism, the modern day keyless works, allowing both hand-winding and time-setting via the crown which is still widely used today.",
+            "So successful was the 19-ligne family of movements that the company eventually adopted the name of its bestselling product, and Omega Watch Co. was established in 1903."
+        ],
+        images: [
+            {
+                img: './images/watches/Omega_19-1.jpg',
+                title: "Omega_19-1"
+            },
+            {
+                img: './images/watches/omega-1894-the-original-omega-calibre-the-company-s-namesake-2.jpg',
+                title: "omega-1894-the-original-omega-calibre-the-company-s-namesake-2"
+            }
+        ]
+    }
+}
+
 export default modelsInfo;

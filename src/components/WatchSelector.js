@@ -19,40 +19,10 @@ const options = [
 const dummyBrandOption = {id: 'DUMMY', name: "Brand Name", brandId: "DUMMY"};
 options.unshift(dummyBrandOption);
 
-
-const allModelOptions = [
-    {id: 'LM', name: "LM", brandId: "SEIKO"},
-    {id: 'BELLMATIC', name: "Bellmatic", brandId: "SEIKO"},
-    {id: 'SQ', name: "SQ (Seiko Quartz)", brandId: "SEIKO"},
-    {id: 'ADVAN', name: "Advan", brandId: "SEIKO"},
-    {id: 'INCAFLEX', name: "Incaflex", brandId: "WYLER"},
-    {id: 'BIGZERO', name: "Big Zero", brandId: "RAKETA"}
-];
-const dummyModelOption = {id: 'DUMMY', name: "Model Name", brandId: "DUMMY"};
-
-allModelOptions.unshift(dummyModelOption);
-
 export default function ComboBox() {
     let seikoInfoDecoder;
     const [value, setValue] = React.useState(options[0]);
     const [inputValue, setInputValue] = React.useState('');
-
-    const [modelValue, setModelValue] = React.useState(allModelOptions[0]);
-    const [modelOptions, setmodelOptions] = React.useState([]);
-    const [modelInputValue, setModelInputValue] = React.useState('');
-
-    let updateModelOptions = (brandValue) => {
-        setModelValue(allModelOptions[0]);
-        let tempModelOptions = allModelOptions.filter((model) => {
-            if (brandValue && model.brandId === brandValue.id) {
-                return model;
-            }
-        })
-
-        let mdlOptions = tempModelOptions == [] ? [dummyModelOption] : tempModelOptions;
-
-        setmodelOptions(mdlOptions);
-    }
 
     return (
         <div style={{marginTop: "20px"}}>
@@ -62,7 +32,6 @@ export default function ComboBox() {
                         value={value}
                         onChange={(event, newValue) => {
                             setValue(newValue);
-                            updateModelOptions(newValue);
                         }}
                         inputValue={inputValue}
                         onInputChange={(event, newInputValue) => {
@@ -75,41 +44,24 @@ export default function ComboBox() {
                         renderInput={(params) => <TextField {...params} label="Brand Name" variant="outlined" />}
                     />
                 </Box>
-                <Box m={1}>
-                    <Autocomplete
-                        value={modelValue}
-                        onChange={(event, newValue) => {
-                            setModelValue(newValue);
-                        }}
-                        inputValue={modelInputValue}
-                        onInputChange={(event, newInputValue) => {
-                            setModelInputValue(newInputValue);
-                        }}
-                        id="combo-box-demo"
-                        options={modelOptions}
-                        getOptionLabel={(option) => option.name}
-                        style={{width: 300}}
-                        renderInput={(params) => <TextField {...params} label="Model Name" variant="outlined" />}
-                    />
-                </Box>
             </Box>
             {
                 value && value.id == "SEIKO" &&
-                <SeikoInfoRenderer model={modelValue.id}></SeikoInfoRenderer>
+                <SeikoInfoRenderer></SeikoInfoRenderer>
             }
 
             {
                 value && value.id == "WYLER" &&
-                <WylerInfoRenderer model={modelValue.id}></WylerInfoRenderer>
+                <WylerInfoRenderer></WylerInfoRenderer>
             }
 
             {
                 value && value.id == "RAKETA" &&
-                <RaketaInfoRenderer model={modelValue.id}></RaketaInfoRenderer>
+                <RaketaInfoRenderer></RaketaInfoRenderer>
             }
             {
                 value && value.id == "OMEGA" &&
-                <OmegaInfoRenderer model={modelValue.id}></OmegaInfoRenderer>
+                <OmegaInfoRenderer></OmegaInfoRenderer>
             }
         </div>
     );
