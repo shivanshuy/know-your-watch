@@ -1,8 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Box from '@material-ui/core/Box';
 import {HashRouter, Link} from 'react-router-dom';
-import WatchSelector from './components/WatchSelector'
+import AppRoutes from './AppRoutes';
 
 function App() {
   return (
@@ -22,8 +21,7 @@ function App() {
           </div>
         </div>
       </div>
-
-      <WatchSelector></WatchSelector>
+      <AppRoutes></AppRoutes>
     </HashRouter>
   );
 }
