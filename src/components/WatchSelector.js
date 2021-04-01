@@ -46,24 +46,26 @@ export default function ComboBox() {
                         />
                     </Box>
                 </Box>
-                {
-                    value && value.id == "SEIKO" &&
-                    <SeikoInfoRenderer></SeikoInfoRenderer>
-                }
+                <Box mt={1} mb={1}>
+                    {
+                        value && value.id == "SEIKO" &&
+                        <SeikoInfoRenderer></SeikoInfoRenderer>
+                    }
 
-                {
-                    value && value.id == "WYLER" &&
-                    <WylerInfoRenderer></WylerInfoRenderer>
-                }
+                    {
+                        value && value.id == "WYLER" &&
+                        <WylerInfoRenderer></WylerInfoRenderer>
+                    }
 
-                {
-                    value && value.id == "RAKETA" &&
-                    <RaketaInfoRenderer></RaketaInfoRenderer>
-                }
-                {
-                    value && value.id == "OMEGA" &&
-                    <OmegaInfoRenderer></OmegaInfoRenderer>
-                }
+                    {
+                        value && value.id == "RAKETA" &&
+                        <RaketaInfoRenderer></RaketaInfoRenderer>
+                    }
+                    {
+                        value && value.id == "OMEGA" &&
+                        <OmegaInfoRenderer></OmegaInfoRenderer>
+                    }
+                </Box>
             </Box>
         </div>
     );

@@ -53,7 +53,7 @@ export default function OmegaInfoRenderer() {
     return (
         <div>
             <Box display="flex" flexDirection="row" flexWrap="wrap">
-                <Box m={1}>
+                <Box mt={1} mb={1} mr={1}>
                     <Autocomplete
                         value={modelValue}
                         onChange={(event, newValue) => {
@@ -70,7 +70,7 @@ export default function OmegaInfoRenderer() {
                         renderInput={(params) => <TextField {...params} label="Model Name" variant="outlined" />}
                     />
                 </Box>
-                <Box m={1}>
+                <Box mt={1} mb={1} mr={1}>
                     <Autocomplete
                         value={calibreValue}
                         onChange={(event, newValue) => {

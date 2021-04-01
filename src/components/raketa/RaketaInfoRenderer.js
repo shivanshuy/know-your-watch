@@ -30,7 +30,7 @@ export default function RaketaInfoRenderer() {
 
     return (
         <div>
-            <Box m={1}>
+            <Box mt={2} mb={1} mr={1}>
                 <Autocomplete
                     value={modelValue}
                     onChange={(event, newValue) => {
@@ -49,7 +49,7 @@ export default function RaketaInfoRenderer() {
                 />
             </Box>
             {generalModelInfo &&
-                <Box p={1} m={1}>
+                <Box mt={1} mb={1} mr={1}>
                     <RaketaGeneralModelInfoRenderer generalModelInfo={generalModelInfo}></RaketaGeneralModelInfoRenderer>
                 </Box>
             }

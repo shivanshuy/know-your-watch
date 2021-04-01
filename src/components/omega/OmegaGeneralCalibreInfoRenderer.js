@@ -28,7 +28,7 @@ export default function OmegaGeneralCalibreInfoRenderer({generalCalibreInfo}) {
         },
         gridList: {
             width: 500,
-            height: 450,
+            height: 800,
         },
     }));
 
@@ -49,7 +49,7 @@ export default function OmegaGeneralCalibreInfoRenderer({generalCalibreInfo}) {
                     ))}
                 </List>
                 <div className={classes.root}>
-                    <GridList cellHeight={160} className={classes.gridList} cols={3}>
+                    <GridList cellHeight={200} className={classes.gridList} cols={2}>
                         {generalCalibreInfo.images.map((image) => (
                             <GridListTile key={image.img} cols={image.cols || 1}>
                                 <img src={image.img} alt={image.title} />
