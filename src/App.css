@@ -5,7 +5,7 @@ body {
 .header { 
   height: 60px; 
   /*background-color: #f6f6f6;*/
-  background-color: #353E47;
+  background-color: #394652;
   color: white;
   display: flex;
   flex-direction:row;
@@ -13,7 +13,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
 }
 
 .header-content { 

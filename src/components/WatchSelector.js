@@ -25,7 +25,7 @@ export default function ComboBox() {
     const [inputValue, setInputValue] = React.useState('');
 
     return (
-        <div style={{margin: "40px"}}>
+        <div style={{marginTop: "80px", marginLeft: "40px", marginRight: "40px"}}>
             <Box display="flex" flexDirection="row" flexWrap="wrap">
                 <Box m={1}>
                     <Autocomplete
