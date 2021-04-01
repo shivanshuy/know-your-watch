@@ -84,8 +84,8 @@ export default function SeikoInfoRenderer() {
 
     return (
         <div>
-            <Box border={1} borderColor="primary.main" display="flex" flexDirection="column" p={1} m={1}>
-                <Box m={1}>
+            <Box display="flex" flexDirection="column" mt={2}>
+                <Box mt={1} mb={1}>
                     <Autocomplete
                         value={modelValue}
                         onChange={(event, newValue) => {
@@ -102,8 +102,8 @@ export default function SeikoInfoRenderer() {
                         renderInput={(params) => <TextField {...params} label="Model Name" variant="outlined" />}
                     />
                 </Box>
-                <Box m={1} display="flex" flexDirection="row">
-                    <Box m={1} fontWeight="fontWeightBold" >Serial Number</Box>
+                <Box mt={1} mb={1} display="flex" flexDirection="row">
+                    <Box mr={1} mt={1} fontWeight="fontWeightBold" >Serial Number</Box>
                     <TextField
                         id="standard-basic"
                         label="Serial"
@@ -113,8 +113,8 @@ export default function SeikoInfoRenderer() {
                             setSerialValue(event.target.value);
                         }} />
                 </Box>
-                <Box m={1} display="flex" flexDirection="row">
-                    <Box m={1} fontWeight="fontWeightBold" >Model Reference</Box>
+                <Box mt={1} mb={1} display="flex" flexDirection="row">
+                    <Box mr={1} mt={1} fontWeight="fontWeightBold" >Model Reference</Box>
                     <TextField
                         id="standard-basic"
                         label="calibre - case code"
@@ -124,8 +124,8 @@ export default function SeikoInfoRenderer() {
                             setModelReferenceValue(event.target.value);
                         }} />
                 </Box>
-                <Box m={1} display="flex" flexDirection="row">
-                    <Box m={1} fontWeight="fontWeightBold" >Movement</Box>
+                <Box mt={1} mb={1} display="flex" flexDirection="row">
+                    <Box mr={1} mt={1} fontWeight="fontWeightBold" >Movement</Box>
                     <TextField
                         id="standard-basic"
                         label="Movement"
@@ -135,7 +135,7 @@ export default function SeikoInfoRenderer() {
                             setmovementValue(event.target.value);
                         }} />
                 </Box>
-                <Box m={1} display="flex" flexDirection="row">
+                <Box mt={1} mb={1} display="flex" flexDirection="row">
                     <Autocomplete
                         value={waterResistValue}
                         onChange={(event, newValue) => {
@@ -152,7 +152,7 @@ export default function SeikoInfoRenderer() {
                         renderInput={(params) => <TextField {...params} label="Water Resist Mark" variant="outlined" />}
                     />
                 </Box>
-                <Box m={1} display="flex" flexDirection="row" bgcolor="background.paper">
+                <Box mt={1} mb={1} display="flex" flexDirection="row" bgcolor="background.paper">
                     <Button variant="contained" color="primary" onClick={() => {
                         decodeWatchInfo();
                     }}
@@ -160,22 +160,23 @@ export default function SeikoInfoRenderer() {
                     </Button>
                 </Box>
             </Box>
-
-            {comparisionInfoLst && comparisionInfoLst.length > 0 &&
-                <Box p={1} m={1}>
-                    <SeikoInfoTableRenderer watchInfoLst={comparisionInfoLst}></SeikoInfoTableRenderer>
-                </Box>
-            }
-            {generalModelRefInfo &&
-                <Box p={1} m={1}>
-                    <SeikoGeneralModelRefInfoRenderer generalModelRefInfo={generalModelRefInfo}></SeikoGeneralModelRefInfoRenderer>
-                </Box>
-            }
-            {generalModelInfo &&
-                <Box p={1} m={1}>
-                    <SeikoGeneralModelInfoRenderer generalModelInfo={generalModelInfo}></SeikoGeneralModelInfoRenderer>
-                </Box>
-            }
+            <Box display="flex" flexDirection="column" mt={1}>
+                {comparisionInfoLst && comparisionInfoLst.length > 0 &&
+                    <Box mt={2}>
+                        <SeikoInfoTableRenderer watchInfoLst={comparisionInfoLst}></SeikoInfoTableRenderer>
+                    </Box>
+                }
+                {generalModelRefInfo &&
+                    <Box mt={2}>
+                        <SeikoGeneralModelRefInfoRenderer generalModelRefInfo={generalModelRefInfo}></SeikoGeneralModelRefInfoRenderer>
+                    </Box>
+                }
+                {generalModelInfo &&
+                    <Box mt={2}>
+                        <SeikoGeneralModelInfoRenderer generalModelInfo={generalModelInfo}></SeikoGeneralModelInfoRenderer>
+                    </Box>
+                }
+            </Box>
         </div>
     );
 }

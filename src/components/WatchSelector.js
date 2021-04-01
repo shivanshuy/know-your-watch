@@ -26,43 +26,45 @@ export default function ComboBox() {
 
     return (
         <div>
-            <Box display="flex" flexDirection="row" flexWrap="wrap">
-                <Box m={1}>
-                    <Autocomplete
-                        value={value}
-                        onChange={(event, newValue) => {
-                            setValue(newValue);
-                        }}
-                        inputValue={inputValue}
-                        onInputChange={(event, newInputValue) => {
-                            setInputValue(newInputValue);
-                        }}
-                        id="combo-box-demo"
-                        options={options}
-                        getOptionLabel={(option) => option.name}
-                        style={{width: 300}}
-                        renderInput={(params) => <TextField {...params} label="Brand Name" variant="outlined" />}
-                    />
+            <Box m={1}>
+                <Box display="flex" flexDirection="row" flexWrap="wrap">
+                    <Box>
+                        <Autocomplete
+                            value={value}
+                            onChange={(event, newValue) => {
+                                setValue(newValue);
+                            }}
+                            inputValue={inputValue}
+                            onInputChange={(event, newInputValue) => {
+                                setInputValue(newInputValue);
+                            }}
+                            id="combo-box-demo"
+                            options={options}
+                            getOptionLabel={(option) => option.name}
+                            style={{width: 300}}
+                            renderInput={(params) => <TextField {...params} label="Brand Name" variant="outlined" />}
+                        />
+                    </Box>
                 </Box>
+                {
+                    value && value.id == "SEIKO" &&
+                    <SeikoInfoRenderer></SeikoInfoRenderer>
+                }
+
+                {
+                    value && value.id == "WYLER" &&
+                    <WylerInfoRenderer></WylerInfoRenderer>
+                }
+
+                {
+                    value && value.id == "RAKETA" &&
+                    <RaketaInfoRenderer></RaketaInfoRenderer>
+                }
+                {
+                    value && value.id == "OMEGA" &&
+                    <OmegaInfoRenderer></OmegaInfoRenderer>
+                }
             </Box>
-            {
-                value && value.id == "SEIKO" &&
-                <SeikoInfoRenderer></SeikoInfoRenderer>
-            }
-
-            {
-                value && value.id == "WYLER" &&
-                <WylerInfoRenderer></WylerInfoRenderer>
-            }
-
-            {
-                value && value.id == "RAKETA" &&
-                <RaketaInfoRenderer></RaketaInfoRenderer>
-            }
-            {
-                value && value.id == "OMEGA" &&
-                <OmegaInfoRenderer></OmegaInfoRenderer>
-            }
         </div>
     );
 }

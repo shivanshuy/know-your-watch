@@ -28,7 +28,7 @@ export default function WylerInfoRenderer() {
 
     return (
         <div>
-            <Box m={1}>
+            <Box>
                     <Autocomplete
                         value={modelValue}
                         onChange={(event, newValue) => {
@@ -47,7 +47,7 @@ export default function WylerInfoRenderer() {
                     />
                 </Box>
             {generalModelInfo &&
-                <Box p={1} m={1}>
+                <Box>
                     <WylerGeneralModelInfoRenderer generalModelInfo={generalModelInfo}></WylerGeneralModelInfoRenderer>
                 </Box>
             }
