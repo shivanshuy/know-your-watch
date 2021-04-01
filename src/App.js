@@ -21,7 +21,9 @@ function App() {
           </div>
         </div>
       </div>
-      <AppRoutes></AppRoutes>
+      <div  style={{marginTop: "80px", marginLeft: "30px", marginRight: "30px"}}>
+        <AppRoutes></AppRoutes>
+      </div>
     </HashRouter>
   );
 }

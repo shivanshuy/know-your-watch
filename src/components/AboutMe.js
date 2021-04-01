@@ -5,7 +5,7 @@ export default function AboutMe() {
     
 
     return (
-        <div style={{marginTop: "20px"}}>
+        <div>
             <Box display="flex" flexDirection="row" flexWrap="wrap">
                 Shivanshu Yadav
             </Box>

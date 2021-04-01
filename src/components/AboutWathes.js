@@ -5,7 +5,7 @@ export default function AboutWathes() {
     
 
     return (
-        <div style={{marginTop: "20px"}}>
+        <div>
             <Box display="flex" flexDirection="row" flexWrap="wrap">
                 About Watches
             </Box>
