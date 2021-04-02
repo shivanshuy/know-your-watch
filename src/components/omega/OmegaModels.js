@@ -77,6 +77,29 @@ export const calibreInfo = {
             }
         ]
     },
+    '30T1SC': {
+        info: [
+            "Calibre 30 refers to size of calibre - diameter 30mm",
+            "Sweep seconds were introduced in 1940, using a bridge that provided indirect central seconds.",
+            "Was released in 1940",
+            "Manual wind",
+            "Sweep second (Center Second)",
+            "16, 17 or – 18 jewels",
+            "No shock protection.",
+            "Under the balance, if you see 30 it is a 30T1. If you see 30T2 then its obvious",
+            "The big wheel on top driving the central sweep seconds hand. You will see it all the centre seconds versions of the 30mm calibres. It is not present in the versions of these movements that featured small sub-seconds hands."
+        ],
+        images: [
+            {
+                img: './images/watches/omega-calibre-30-t1-sc.jpg',
+                title: "omega-calibre-30-t1-sc"
+            },
+            {
+                img: './images/watches/omega-calibre-30-t1-sc-2.jpg',
+                title: "omega-calibre-30-t1-sc-2"
+            }
+        ]
+    },
     '30T2': {
         info: [
             "Calibre 30 refers to size of calibre - diameter 30mm",
@@ -97,7 +120,75 @@ export const calibreInfo = {
                 title: "omega-calibre-30-t2"
             }
         ]
-    }
+    },
+    '30T2SC': {
+        info: [
+            "Calibre 30 refers to size of calibre - diameter 30mm",
+            "Sweep seconds were introduced in 1940, using a bridge that provided indirect central seconds.",
+            "Was released in 1940",
+            "Manual wind",
+            "Sweep second (Center Second)",
+            "16, 17 or – 18 jewels",
+            "No shock protection.",
+            "Under the balance, if you see 30 it is a 30T1. If you see 30T2 then its obvious",
+            "The big wheel on top driving the central sweep seconds hand. You will see it all the centre seconds versions of the 30mm calibres. It is not present in the versions of these movements that featured small sub-seconds hands."
+        ],
+        images: [
+            {
+                img: './images/watches/omega-calibre-30-t2-sc.jpg',
+                title: "omega-calibre-30-t2-sc"
+            }
+        ]
+    },
+    '30T2PCAM': {
+        info: [
+            "Calibre 30 refers to size of calibre - diameter 30mm",
+            "AM means anti-magnetic, PC means shock-protected",
+            "Shock Protected Incabloc",
+            "Was released in 1941",
+            "Manual wind",
+            "Sub second",
+            "15 or – 17 jewels",
+            "Under the balance, if you see 30 it is a 30T1. If you see 30T2 then its obvious",
+        ],
+        images: [
+            {
+                img: './images/watches/omega-calibre-30-t2-pc-am.jpg',
+                title: "omega-calibre-30-t2-pc-am"
+            },
+            {
+                img: './images/watches/omega-calibre-30-t2-pc-am-2.jpg',
+                title: "omega-calibre-30-t2-pc-am-2"
+            }
+        ]
+    },
+    '30T2RG': {
+        info: [
+            "These special movements were designed to be suitable to exhaustive regulation for the Chronometer competitions held annually at the Geneva and Neuchatel Observatories, and typical of their kind",
+            "it has a very different regulator",
+            "Calibre 262",
+            "Calibre 30 refers to size of calibre - diameter 30mm",
+            "Chronometre, no shock protection",
+            "RG means special regulating (chronometer)",
+            "Shock Protected Incabloc",
+            "Was released in 1943",
+            "Manual wind",
+            "Sub second",
+            "16 or – 17 jewels",
+            "Under the balance, if you see 30 it is a 30T1. If you see 30T2 then its obvious",
+            "30 T2 RG were the first movements that were copper colored."
+        ],
+        images: [
+            {
+                img: './images/watches/omega-calibre-30-t2-rg.jpg',
+                title: "omega-calibre-30-t2-rg"
+            },
+            {
+                img: './images/watches/omega-calibre-30-t2-rg-2.jpg',
+                title: "omega-calibre-30-t2-rg-2"
+            }
+        ]
+    },
 }
 
 export default modelsInfo;
